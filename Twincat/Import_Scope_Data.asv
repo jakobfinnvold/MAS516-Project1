@@ -1,6 +1,0 @@
-clear; close all; clc; 
-
-M = readtable("Auto_Scopes.csv"); 
-
-M.fWirePosition((25:,1 ); 
- 
