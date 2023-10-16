@@ -94,20 +94,21 @@ fWinchPosRef = [t, M.fPosRefWinch(7600:11500,1)];
 
 %%%% Calculations of run 2 %%%%
 
-% At time = 7.3 winch is hoisting the load:
+% At time = 8.0 winch is hoisting the load:
 Cd = 0.55;
 rho = 875;
 
-Q_winch= -5.8932 * 10^-3/60; % m3/s
+Q_winch= 7.6 * 10^-3/60; % m3/s
 P_A1 = 1.42826e5; % bar/Pa
-P_A = 4.4068e5; % bar/Pa
-P_B = 34.095e5; % bar/Pa
-P_B1 = 34.6812e5; % bar/Pa
-P_s = 67.5557e5; % bar/Pa
-P_r = 0.76296e5; % bar/Pa
-u_w = 0.036; % [-]
+P_A = 3.3e5; % bar/Pa
+P_B = 28.8e5; % bar/Pa
+P_B1 = 29.3e5; % bar/Pa
+P_s = 70.0e5; % bar/Pa
+P_r = 0.3808e5; % bar/Pa
+u_w = 0.035; % [-]
 wire_pos = 0.231; % meter
 
 root = 2*(P_s*10^5 - P_B1*10^5)/rho
+rott2 = 1/rho*(P_s - 1*10^5 - (u_w/abs(u_w)*(P_B-P_A)));
 
-Ad_max = Q_winch/(Cd*u_w * sqrt(root)) * 10^6;
+Ad_max = Q_winch/(Cd*u_w * sqrt(rott2)) * 10^6;
