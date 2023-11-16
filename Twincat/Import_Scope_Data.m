@@ -87,6 +87,7 @@ fWinchBPressure = [t, M.fWinch_B_Pressure(7600:11500,1)];
 fWinchB1Pressure = [t, M.fWinch_B1_Pressure(7600:11500,1)];
 fWinchDrainPressure = [t, M.fWinchDrainPressure(7600:11500,1)]; 
 fWinchFlow = [t, M.fWinchFlow(7600:11500,1)];
+fPosRef = [t, M.fPosRefWinch(7600:11500, 1)];
 
 % Winch velocity and position Ref
 fWinchVelRef = [t, M.fVelRefWinch(7600:11500,1)];
